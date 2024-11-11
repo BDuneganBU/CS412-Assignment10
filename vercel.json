@@ -1,13 +1,22 @@
 {
-    "builds": [{
-        "src": "cs412/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+    "builds": [
+        {
+            "src": "cs412/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "50mb",
+                "runtime": "python3.12"
+            }
+        }
+    ],
     "routes": [
         {
-          "src": "/(.*)",
-          "dest": "cs412/wsgi.py"
+            "src": "/(.*)",
+            "dest": "cs412/wsgi.py"
         }
-    ]
+    ],
+    "env": {
+        "DJANGO_SETTINGS_MODULE": "cs412.settings"
+    },
+    "buildCommand": "pip install -r requirements.txt"
 }
