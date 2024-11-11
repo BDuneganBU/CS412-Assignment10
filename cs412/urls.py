@@ -28,6 +28,8 @@ urlpatterns = [
     path('formdata/', include('formdata.urls')),
     path('blog/', include('blog.urls')), # include the URLs from our blog project's urls.py file
     path('mini_fb/', include('mini_fb.urls')), # include the URLs from our blog project's urls.py file
+    path('ma/', include('marathon_analytics.urls')), # include the URLs
+    path('va/', include('voter_analytics.urls')), # include the URLs
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

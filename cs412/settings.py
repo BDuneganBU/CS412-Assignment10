@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'formdata', #Example formdata app
     'blog', #Example blog app
     'mini_fb', #Assignment 5 app
+    'marathon_analytics',
+    'voter_analytics',
 ]
 
 MIDDLEWARE = [
