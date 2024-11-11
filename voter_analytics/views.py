@@ -2,7 +2,8 @@
 from django.views.generic import ListView
 from . models import Voter
 from datetime import datetime
-import plotly.graph_objs as go
+import plotly
+import plotly.graph_objects as go
 from django.views.generic import DetailView
 from django.db.models import Q
 from django.shortcuts import redirect
